@@ -35,7 +35,18 @@ and open the template in the editor.
         $second->add_grade(80);
         $second->add_grade(50);
         $students['a456'] = $second;
-
+        
+        $third = new Student();
+        $third->surname = "Tallentire";
+        $third->first_name = "Thomas";
+        $third->add_email('home', 'tallentire@home.ca');
+        $third->add_email('work1', 'ttallentire@my.bcit.ca');
+        $third->add_grade(84);
+        $third->add_grade(86);
+        $third->add_grade(94);
+        $students['t654'] = $third;
+        
+        ksort($students);
         foreach($students as $student) {
             echo $student->toString();
         }
